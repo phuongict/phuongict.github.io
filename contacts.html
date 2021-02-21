@@ -12,7 +12,7 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="revisit-after" content="3 days" />
 	
-    <title>Organic Food - Ecwid Eshop</title>
+    <title>Organic Food - Contacts</title>
 	
 	<!-- Styles -->			
     <!-- Uikit CSS -->
@@ -36,11 +36,35 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <!-- Ecwid -->	
-    <link rel="dns-prefetch" href="http://images-cdn.ecwid.com/">
-    <link rel="dns-prefetch" href="http://images.ecwid.com/">
-    <link rel="dns-prefetch" href="http://app.ecwid.com/">	
-	
+    <!-- Google Maps -->	
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+	  "use strict";
+	  var myCenter=new google.maps.LatLng(-33.82599600, 151.18014700);
+      function initialize() {
+        var mapCanvas = document.getElementById('mapCanvas');
+        var mapOptions = {
+          center: myCenter,
+          zoom: 14,
+		  scrollwheel: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        //var iconBase = 'https://maps.google.com/mapfiles/kml/pushpin/';
+		var iconBase = 'images/elements/';
+        var marker = new google.maps.Marker({
+          position: mapOptions.center,
+          map: map,
+		  icon: iconBase + 'garlic.png'
+        });	
+        marker.setMap(map);
+        var infowindow = new google.maps.InfoWindow({
+          content:"<div id='legend' style='color: #000 !important; text-align: center;'>Welcome to our main office!</div>"
+        });
+        infowindow.open(map,marker);		
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);  
+    </script>		
   </head>
 
   <body>
@@ -187,13 +211,13 @@
 						</div>
 					  </div>
 					</li>
-					<li class="menu-item"><a href="contacts.html">Contacts</a></li>
-					<li class="menu-item has-child current-item active">
+					<li class="menu-item current-item active"><a href="contacts.html">Contacts</a></li>
+					<li class="menu-item has-child">
 					  <a href="shop.html"><i class="uk-icon-shopping-cart"></i> Shop</a>
 					  <div style="width: 300px;" class="dropdown dropdown-main menu-left">
 					    <div class="dropdown-inner">
 						  <ul class="dropdown-items">
-						    <li class="menu-item active"><a href="shop.html">Ecwid Shop Example</a></li>
+						    <li class="menu-item"><a href="shop.html">Ecwid Shop Example</a></li>
 							<li class="menu-item"><a href="shop.html#!/Salmon/p/57673142/category=15703381">Ecwid Single Product</a></li>
 							<li class="menu-item"><a href="shop.html#!/Meat/c/15703381/offset=0&amp;sort=normal">Ecwid Product Category</a></li>
 						  </ul>
@@ -207,305 +231,137 @@
 		  </div>
 		</header>
 	  </div>
-	  <!-- /Sticky Menu -->	
+	  <!-- /Sticky Menu -->
 
-      <!-- Slider -->
-	  <section id="ukSlider" class="uk-slider-section">
-        <div class="container-fluid">
-	      <div class="row">                        
-            <div class="col-md-12 padding-0">
-              <div class="uk-slidenav-position" data-uk-slideshow="{animation: 'scale', autoplay:true}">
-                <ul class="uk-slideshow uk-overlay-active">
-                  <li aria-hidden="false" class="uk-active" style="animation-duration: 500ms; width: 100%; height: auto;">				  
-				    <div class="uk-cover-background uk-position-cover uk-animation-15 uk-animation-reverse uk-animation-bottom-left" style="background-image: url(&quot;images/slider/slider5-ecwid/slide1.jpg&quot;);"></div>
- 				    <div class="uk-grid">					  
-                      <div class="uk-width-medium-1-1">
-				        <img width="1920" height="700" alt="Shop Slide" src="images/slider/slider5-ecwid/slide1.jpg" style=" width: 100%; height: auto;">
-                      </div>
-                    </div>					
-                    <div class="uk-overlay-panel uk-overlay-fade">
-                      <div class="uk-container uk-container-center uk-height-1-1 uk-width-1-1 uk-flex uk-flex-middle">
-                        <div class="uk-width-medium-3-6 uk-text-left">
-						  <div class="wow fadeInLeft slider-text" data-wow-delay="0.7s" >
-						    <h3 class="lato85 lato56 uk-text-white">WE OFFER</h3>
-					      </div>
-						  <div class="wow fadeInLeft slider-text slider-text-2" data-wow-delay="1.2s">		
-                            <h1 class="lato85 lato56 uk-text-white">THE BEST</h1>
-					      </div>
-						  <div class="wow fadeInUp  slider-text-3" data-wow-delay="1.7s">		
-                            <h1 class="lato85 lato56 uk-text-primary">ORGANICS</h1>
-					      </div>
-						  <div class="wow fadeInUp" data-wow-delay="2.5s">		
-                            <a class="uk-button uk-button-primary uk-button-large shop-button" href="#search-box">Shop Now!</a>
-					      </div>													
-                        </div>
-                      </div>
-                    </div>					
-				  </li>					  
-                </ul>
-              </div>
-		    </div>
+      <!-- Page Title -->
+      <section class="page-title">
+		<div class="container">	  
+	      <div class="row">
+		    <div class="col-sm-12 col-md-12 title">
+			  <h2>Contacts</h2>
+              <ol class="breadcrumb">
+                <li>You are here: &nbsp;</li>
+				<li><a class="pathway" href="index.html">Home</a></li>
+				<li class="active">Contacts</li>				  
+		      </ol>
+			</div>
 		  </div>
-	    </div>
+		</div>
 	  </section>
-	  <!-- /Slider -->
-
-	  <!-- Shop Top -->
-      <section class="top-a">
-	    <div class="container">
-		  <div class="row">
-		    <div class="col-sm-12 col-md-12">
-			  <div class="module title2">
-			    <div class="module-content">
-	              <div data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:400}" class="uk-grid uk-grid-width-medium-1-3 uk-scrollspy-init-inview uk-scrollspy-inview" data-uk-grid-margin="">
-                    <a href="#">
-                      <figure class="uk-overlay uk-border-rounded uk-overlay-hover">
-                        <img width="600" height="400" src="images/elements/special1.jpg" alt="Pancakes" class="uk-border-rounded uk-overlay-scale">
-                        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-                          <h6>Special Offers</h6>
-                          <p>Lorem ipsum dolor sit amet.</p>
-                        </figcaption>
-                      </figure>
-                    </a>
-                    <a href="#">
-                      <figure class="uk-overlay uk-border-rounded uk-overlay-hover">
-                        <img width="600" height="400" src="images/elements/special2.jpg" alt="Salmon" class="uk-border-rounded uk-overlay-scale">
-                        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-                          <h6>Seasonal Veggies</h6>
-                          <p>Lorem ipsum dolor sit amet.</p>
-                        </figcaption>
-                      </figure>
-                    </a>
-                    <a href="#">
-                      <figure class="uk-overlay uk-border-rounded uk-overlay-hover">
-                        <img width="600" height="400" src="images/elements/special3.jpg" alt="Salad" class="uk-border-rounded uk-overlay-scale">
-                        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-                          <h6>Free Delivery</h6>
-                          <p>Lorem ipsum dolor sit amet.</p>
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                </div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </section>	  
-	  <!-- /Shop Top -->
+	  <!-- /Page Title -->	  
 	  
-	  <!-- Ecwid Search Box -->
-      <section id="search-box" class="user-section">
-	    <div class="container">
-		  <div class="row">
+	  <!-- Map -->	
+      <section class="map">
+	    <div class="container-fluid">
+	      <div class="row">
 		    <div class="col-sm-12 col-md-12">
-			  <div class="module title3">
-			    <div class="module-content">
-				  <!-- Ecwid Search Panel -->
-                  <script type="text/javascript" src="https://app.ecwid.com/script.js?7667255" charset="utf-8"></script>
-                  <script type="text/javascript"> xSearchPanel("style="); </script>
-				  <!-- /Ecwid Search Panel -->
-				</div>
-			  </div>
-			</div>
+              <div id="mapCanvas" class="map-canvas"></div>		  
+            </div>		  
 		  </div>
 		</div>
-	  </section>	  
-	  <!-- /Ecwid Search Box -->
+      </section>	  
+	  <!-- /Map -->
 
-	  <!-- Ecwid Shopping Cart -->
+	  <!-- Contact -->
       <section class="main-body">
 	    <div class="container">
 		  <div class="row">
-		    <div class="col-sm-3 col-md-3">
-			  <div class="module title3">
-			    <div class="module-content">
-				  <!-- Ecwid Minicart -->
-	              <script type="text/javascript"> xMinicart("style="); </script>
-                  <!-- /Ecwid Minicart -->
-				</div>
-			  </div>
-			  <div class="module title3">
-			    <h3 class="module-title">Categories</h3>
+		    <div class="col-sm-3 col-md-3" id="left">
+			  <div class="module title1">
+			    <h3 class="module-title">Local Spots</h3>
 				<div class="module-content">
-				  <!-- Ecwid Categories -->
-                  <script type="text/javascript"> xVCategories("style="); </script>
-                  <!-- /Ecwid Categories -->
-				</div>
+	              <h4 class="uk-text-primary"><i class="uk-icon-map-marker"></i>&nbsp;&nbsp;&nbsp;Washington Local Spot</h4>
+                  <p>Your Organic Paradise</p>
+                  <a class="uk-button uk-button-primary uk-button-mini" data-uk-modal="{center:true}" href="#spot1">View Map</a>
+                  <div class="uk-modal" id="spot1">
+                    <div class="uk-modal-dialog uk-modal-dialog-blank">
+                      <a class="uk-modal-close uk-close"></a>
+                      <iframe allowfullscreen="" class="map-modal" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.4480532526673!2d151.07480861575172!3d-33.800748772962535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4446d8ed0cf%3A0x05017d681632b480!2sDenistone+West+NSW+2114%2C+Australia!5e0!3m2!1sen!2sus!4v1449304684053"></iframe>
+                    </div>
+                  </div>
+                  <hr>
+                  <h4 class="uk-text-primary"><i class="uk-icon-map-marker"></i>&nbsp;&nbsp;&nbsp;Los Angelis Local Spot</h4>
+                  <p>From the farm to the beach</p>
+                  <a class="uk-button uk-button-warning uk-button-mini" data-uk-modal="{center:true}" href="#spot2">View Map</a>
+                  <div class="uk-modal" id="spot2">
+                    <div class="uk-modal-dialog uk-modal-dialog-blank">
+                      <a class="uk-modal-close uk-close"></a>
+                      <iframe allowfullscreen="" class="map-modal" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.4480532526673!2d151.07480861575172!3d-33.800748772962535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4446d8ed0cf%3A0x05017d681632b480!2sDenistone+West+NSW+2114%2C+Australia!5e0!3m2!1sen!2sus!4v1449304684053"></iframe>
+                    </div>
+                  </div>
+                  <hr>
+                  <h4 class="uk-text-primary"><i class="uk-icon-map-marker"></i>&nbsp;&nbsp;&nbsp;New York Local Spot</h4>
+                  <p>Organic apples in the Big Apple</p>
+                  <a class="uk-button uk-button-danger uk-button-mini" data-uk-modal="{center:true}" href="#spot3">View Map</a>
+                  <div class="uk-modal" id="spot3">
+                    <div class="uk-modal-dialog uk-modal-dialog-blank">
+                      <a class="uk-modal-close uk-close"></a>
+                      <iframe allowfullscreen="" class="map-modal" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.4480532526673!2d151.07480861575172!3d-33.800748772962535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4446d8ed0cf%3A0x05017d681632b480!2sDenistone+West+NSW+2114%2C+Australia!5e0!3m2!1sen!2sus!4v1449304684053"></iframe>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
 			  </div>
 			</div>
-			<div class="col-sm-9 col-md-9">
-	          <!-- Ecwid Product Browser -->
-			  <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(3,3) list(10) table(20)","categoryView=grid","searchView=list","id=my-store-");</script>
-              <!-- /Ecwid Product Browser -->
+			<div class="col-sm-6 col-md-6 contact">		
+			  <h3>Contact</h3>		  
+              <form class="form-horizontal" method="post">
+                <fieldset>
+			      <legend>Send an Email. All fields with an asterisk (*) are required.</legend>					
+                  <div class="form-group">
+                    <label for="inputName" class="control-label label-left col-xs-4">Name *</label>
+                    <div class="col-xs-8">
+                      <input type="text" class="form-control" id="inputName" placeholder=" Your name" name="inputName">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="control-label label-left col-xs-4">Email *</label>
+                    <div class="col-xs-8">
+                      <input type="email" class="form-control" id="email" placeholder=" Email for contact" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputSubject" class="control-label label-left col-xs-4">Subject *</label>
+                    <div class="col-xs-8">
+                      <input type="text" class="form-control" id="inputSubject" placeholder=" Enter the subject of your message here" name="inputSubject">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputMessage" class="control-label label-left col-xs-4">Message *</label>
+                    <div class="col-xs-8">
+                      <textarea class="form-control" id="inputMessage" placeholder="Enter your message here" name="inputMessage"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="sendToYourself" class="control-label label-left col-xs-4">Send copy to yourself</label>
+                    <div class="col-xs-8">
+                      <div class="checkbox">
+                        <label><input type="checkbox" id="sendToYourself" name="sendToYourself">Sends a copy of the message to the address you have supplied</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label label-left col-xs-4"></label>			
+                    <div class=" col-xs-8">
+					  <button class="btn btn-primary validate" type="submit" aria-invalid="false">Send Email</button>
+                    </div>
+                  </div>
+                </fieldset>				
+              </form>					
             </div>
-		  </div>
-		</div>
-	  </section>	  
-	  <!-- /Ecwid Shopping Cart -->
-
-	  <!-- /Want Some More -->
-      <section class="parallax-section-2 container-fluid">
-	    <div class="row">
-		  <div class="col-sm-12 col-md-12">
-		    <div class="module">
-			  <div class="module-content">
-	            <div class="uk-text-contrast uk-text-center uk-flex uk-flex-center uk-flex-middle" data-uk-parallax="{bg: -300}" style="height: 100%; background-image: url(&quot;images/elements/slide1.jpg&quot;); background-color: rgb(105, 189, 67); background-repeat: no-repeat; background-position: 50% 0px;">
-                  <div class="container inverted padding-50">
-                    <div class="uk-text-center">
-                      <h3 class="uk-text-contrast">Want some more of this Amazing Organic Food?&nbsp;&nbsp;&nbsp;<a class="uk-button uk-button-large">Yes, please!</a></h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-			</div>
-		  </div>
-		</div>
-	  </section>	    
-	  <!-- /Want Some More -->
-
-	  <!-- Delivery, Policy, Services -->
-      <section class="bottom">
-	    <div class="container">
-		  <div class="row">
-		    <div class="col-sm-12 col-md-12">
-			  <div class="module ">
-			    <div class="module-content">
-	              <div class="uk-grid">
-                    <div class="uk-width-large-1-3">
-                      <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1b">
-                        <dl class="uk-description-list-horizontal">
-                          <dt>
-                            <span class="hi-icon uk-icon-truck"></span>
-                          </dt>
-                          <dd class="uk-text-left">
-                            <h4>Free Delivery</h4>
-                            <p>Acquired immunodeficiency syndrome infant botulism candidiasis cysticercosis.</p>
-                          </dd>
-                        </dl>
-                      </div>
-                    </div>
-                    <div class="uk-width-large-1-3">
-                      <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1b">
-                        <dl class="uk-description-list-horizontal">
-                          <dt>
-                            <span class="hi-icon uk-icon-leaf"></span>
-                          </dt>
-                          <dd class="uk-text-left">
-                            <h4>Organic Policy</h4>
-                            <p>Acquired immunodeficiency syndrome infant botulism candidiasis cysticercosis.</p>
-                          </dd>
-                        </dl>
-                      </div>
-                    </div>
-                    <div class="uk-width-large-1-3">
-                      <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1b">
-                        <dl class="uk-description-list-horizontal">
-                          <dt>
-                            <span class="hi-icon uk-icon-paperclip"></span>
-                          </dt>
-                          <dd class="uk-text-left">
-                            <h4>Organic Services</h4>
-                            <p>Acquired immunodeficiency syndrome infant botulism candidiasis cysticercosis.</p>
-                          </dd>
-                        </dl>
-                      </div>
-                    </div>
-                  </div>
+			<div class="col-sm-3 col-md-3" id="right">
+			  <div class="module title1">
+			    <h3 class="module-title">Remember Hershel?</h3>
+				<div class="module-content">
+	              <a href="#"><img alt="Farmer Review" src="images/elements/farmer.png" title="Farmer Review"></a>
                 </div>
 			  </div>
 			</div>
 		  </div>
 		</div>
 	  </section>	  
-	  <!-- /Delivery, Policy, Services -->
+	  <!-- /Contact -->	    
 
-	  <!-- Organic Bio Labels -->
-      <section class="bottom-a">
-	    <div class="container">
-		  <div class="row">
-		    <div class="col-sm-12 col-md-12">
-			  <div class="module title2">
-			    <h3 class="module-title">Organic Bio Labels</h3>
-				  <div class="module-content">
-                    <div data-uk-slideset="{default: 6}">
-                      <ul class="uk-grid uk-slideset">
-                        <li>
-				          <div class="uk-text-center">
-						    <img alt="austria" class="uk-border-rounded" src="images/labels/austria.png">
-					      </div>
-					    </li>
-                        <li>
-				          <div class="uk-text-center">
-					        <img alt="canada" class="uk-border-rounded" src="images/labels/canada.png">
-					      </div>
-					    </li>
-		                <li>
-				          <div class="uk-text-center">
-					        <img alt="china" class="uk-border-rounded" src="images/labels/china.png">
-					      </div>
-					    </li>
-                        <li>
-				          <div class="uk-text-center">
-						    <img alt="finland" class="uk-border-rounded" src="images/labels/finland.png">
-					      </div>
-					    </li>
-                        <li>
-				          <div class="uk-text-center">
-					        <img alt="france" class="uk-border-rounded" src="images/labels/france.png">
-					      </div>
-					    </li>
-		                <li>
-				          <div class="uk-text-center">
-					        <img alt="usa" class="uk-border-rounded" src="images/labels/usa.png">
-					      </div>
-					    </li>					  
-                        <li>
-				          <div class="uk-text-center">
-						    <img alt="australia" class="uk-border-rounded" src="images/labels/australia.png">
-					      </div>
-					    </li>
-                        <li>
-				          <div class="uk-text-center">
-					        <img alt="bulgaria" class="uk-border-rounded" src="images/labels/bulgaria.png">
-					      </div>
-					    </li>
-		                <li>
-				          <div class="uk-text-center">
-					        <img alt="denmark" class="uk-border-rounded" src="images/labels/denmark.png">
-					      </div>
-					    </li>
-                        <li>
-				          <div class="uk-text-center">
-						    <img alt="europe" class="uk-border-rounded" src="images/labels/europe.png">
-					      </div>
-					    </li>
-                        <li>
-				          <div class="uk-text-center">
-					        <img alt="germany" class="uk-border-rounded" src="images/labels/germany.png">
-					      </div>
-					    </li>
-		                <li>
-				          <div class="uk-text-center">
-					        <img alt="uk" class="uk-border-rounded" src="images/labels/uk.png">
-					      </div>
-					    </li>						  
-                      </ul>
-				      <div class="uk-grid">
-				        <div class="uk-width-small-1-5 uk-push-2-5 uk-flex uk-flex-center" >
-                          <a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>							
-                          <a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>						  
-				        </div>							  							  
-                      </div>						  
-                    </div>				  
-                  </div>
-              </div>
-		    </div>
-	      </div>
-		</div>
-      </section>	  
-	  <!-- /Organic Bio Labels -->
-	  
 	  <!-- Bottom -->	  
       <section class="bottom-b">
 	    <div class="container">
